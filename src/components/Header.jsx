@@ -7,14 +7,14 @@ import { faHouse } from '@fortawesome/free-solid-svg-icons'
 const Header = () => {
     return ( 
     <div className="header">
-        <div className="container">
-            <img src={logo} alt="Hot Forex logo" className="logo"></img>
-            <div className="nav-icon">
+        <div className="header__container">
+            <img src={logo} alt="Hot Forex logo" className="header__logo"></img>
+            <div className="header__nav-icon">
                 <FontAwesomeIcon icon={faBars}/>
             </div>
 
-            <div className="nav-container">
-                <div className="home-icon">
+            <div className="header__nav-container">
+                <div className="header__home-icon">
                     <FontAwesomeIcon icon={faHouse} />
                 </div>
                 <p>ABOUT</p>
