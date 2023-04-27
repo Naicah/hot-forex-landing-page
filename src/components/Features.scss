@@ -21,7 +21,7 @@
     }
     
     &__content-container {
-        display: inline-grid;
+        display: grid;
         // Desktop layout
         @media (min-width: 600px) {
             grid-template-columns: 33% 33% 33%;

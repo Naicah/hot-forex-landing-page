@@ -1,0 +1,73 @@
+@import '../scss/main.scss';
+
+.info {
+    background-image: url(../assets/purplebkg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__container {
+        width: 80%;
+        max-width: $content-width;
+        padding: 2rem 0;
+        color: white;
+        text-align: left;
+        font-size: $normal-content;
+        display: inline-grid;
+        
+        // Desktop layout
+        @media (min-width: 600px) {
+            grid-template-columns: 63% 37%;
+            padding-bottom: 0
+        }
+    }
+
+    &__image {
+        @media (min-width: 600px) {
+            display: grid;
+            align-content: end;
+            img {
+                justify-self: end;
+                max-width: 70%;
+            }
+        }
+
+        // Hide image on mobile
+        @media (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    &__content-container {
+         // Desktop layout
+         @media (min-width: 600px) {
+            display: grid;
+            align-content: center;
+            justify-content: start;
+            padding-bottom: 2rem;
+            max-width: 60%;
+        }
+    }
+
+    &__header {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-size: 1.2rem;
+    }
+
+    &__text-container {
+        padding-top: 1.5rem;
+    }
+
+    &__text-header {
+        color: $primary-color;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    &__text{ 
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+      
+}

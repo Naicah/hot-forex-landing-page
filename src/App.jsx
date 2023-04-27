@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Tool from './components/Tool'
 import Form from './components/Form'
 import Feature from './components/Features'
+import Info from './components/Info'
 import './App.css'
 import './scss/main.scss'
 
@@ -15,6 +16,7 @@ function App() {
       <Tool/>
       <Form/>
       <Feature/>
+      <Info/>
     </>
   )
 }

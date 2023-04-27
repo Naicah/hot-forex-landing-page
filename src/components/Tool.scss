@@ -11,7 +11,7 @@
     &__container {
         width: 80%;
         max-width: $content-width;
-        display: inline-grid;
+        display: grid;
 
         // Desktop layout
         @media (min-width: 600px) {
@@ -25,6 +25,12 @@
         color: white;
         text-align: left;
 
+           // Desktop layout
+           @media (min-width: 600px) {
+            display: grid;
+            align-content: end; 
+        }
+
         h2, h3, p {
             font-weight: normal;
             margin-block-start: 0;
@@ -34,11 +40,12 @@
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         h3 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            padding-bottom: 1rem
         }
 
         p {
@@ -52,17 +59,22 @@
 
     &__download {
         display: flex;
+        justify-content: space-around;
         margin-top: 2rem;
+        
+        @media (min-width: 600px) {
+            justify-content: flex-start;
+        }
+
         img {
             width: 7rem;
         }
     }
 }
 .grid {
-    display: inline-grid;
+    display: grid;
     
-    
-    @media (min-width: 1070px) {
+    @media (min-width: 600px) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     
