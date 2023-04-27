@@ -1,0 +1,129 @@
+@import '../scss/main.scss';
+
+.form {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+
+    &__container {
+        width: 80%;
+        max-width: $content-width;
+        display: inline-grid;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 1px solid rgb(103, 103, 103);
+        font-size: 0.8rem;
+        &::placeholder {
+            color:black;
+        }
+
+    }
+    select {
+        margin: 0;      
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      
+    }
+    
+    select.form__input {
+        
+        background-image:
+        linear-gradient(45deg, transparent 50%, rgb(158, 158, 158) 50%),
+        linear-gradient(135deg, rgb(158, 158, 158) 50% 50%, transparent 50%);
+ 
+        background-position:
+            calc(100% - 20px) calc(1em + 2px),
+            calc(100% - 15px) calc(1em + 2px);
+        background-size:
+            5px 5px,
+            5px 5px;
+        background-repeat: no-repeat;
+    }
+    
+    &__phone-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__phone-prefix {
+        width: 20%
+    }
+    &__phone {
+        width: 78%
+    }
+
+
+    &__terms-label {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 0.7rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin-top:1rem;        
+    }
+    
+    &__terms {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    &__terms-checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1rem;
+        width: 1rem;
+        border: 1px solid rgb(103, 103, 103);
+
+    }
+    
+    .form__terms-checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    
+    .form__terms-label input:checked ~ .form__terms-checkmark:after {
+        display: block;
+    }
+
+    .form__terms-label .form__terms-checkmark:after {
+        left: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid rgb(103, 103, 103);
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+    &__submit-button {
+        background-color: $primary-color;
+        color: white;
+        padding: 0.6em;
+        width: 100%;
+        font-size: 1em;
+        font-weight: 700;
+        cursor: pointer;
+        border: none;
+        margin: 1rem 0
+    }
+}
