@@ -4,6 +4,7 @@ import Tool from './components/Tool'
 import Form from './components/Form'
 import Feature from './components/Features'
 import Info from './components/Info'
+import Download from './components/Download'
 import './App.css'
 import './scss/main.scss'
 
@@ -17,6 +18,7 @@ function App() {
       <Form/>
       <Feature/>
       <Info/>
+      <Download/>
     </>
   )
 }

@@ -1,0 +1,33 @@
+@import '../scss/main.scss';
+.download {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+    
+    &__container {
+        width: 80%;
+        max-width: $content-width;
+        display: grid;
+    }
+    
+    &__info { 
+        font-size: $normal-content;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        max-width: 32%;
+        margin: auto;
+
+        &--bold {
+            font-weight: 700;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &__icons {
+        img {
+            width: 8rem;
+        }
+    }
+
+
+}
