@@ -1,0 +1,119 @@
+@import '../scss/main.scss';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(25, 25, 25);
+    color: rgb(170, 169, 169);
+    
+    &__container {
+        width: 80%;
+        max-width: $content-width;
+        margin: auto;
+
+           // Desktop layout
+           @media (min-width: 600px) {
+            display: grid;
+            grid-template-columns: 30% 70%;
+        }
+
+        &--social {
+            // Desktop layout
+            @media (min-width: 600px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+    &__award-container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__social-container {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(47, 47, 47);
+        width: 100%;
+
+    }
+
+    &__social-icons-container {
+        padding-bottom: 1rem;
+
+        // Desktop layout
+        @media (min-width: 600px) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__social-icon{
+        padding: 0 0.5rem ;
+    }
+
+    &__primary-icon {
+        color: $primary-color;
+        padding-right: 1rem;
+    }
+
+    &__award-text {
+        font-weight: 700;
+    }
+
+    &__main-container {
+        padding-bottom: 2rem;
+    }
+
+    &__contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // Desktop layout
+        @media (min-width: 600px) {
+            align-items: flex-start;
+        }
+    }
+
+    &__header {
+        font-weight: 700;
+        font-size: 0.7rem;
+        margin-block-start: 1rem;
+        margin-block-end: 0;
+    }
+
+    &__contact-row {
+        display: flex;
+        align-items: center;
+        padding: 0.3rem 0;
+    }
+
+    &__text {
+        font-size: 0.6rem;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    &__map-container {
+        // Desktop layout
+        @media (min-width: 600px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+    }
+
+    &__map-section { 
+        padding-bottom: 0.5em;
+    }
+
+    &__map-row {
+        padding: 0.1rem 0;
+    }
+
+   
+}

@@ -2,7 +2,6 @@ import './Download.scss'
 import googleplay from '../assets/googleplay.png'
 import appstore from '../assets/appstore.png'
 
-
 const Download = () => {
     return ( 
     <div className="download" >
@@ -19,9 +18,6 @@ const Download = () => {
                 <img src={appstore} alt="App store"></img>
             </div>
         </div>
-
-
-
     </div>
     );
 };

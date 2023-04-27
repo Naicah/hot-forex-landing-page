@@ -5,6 +5,7 @@ import Form from './components/Form'
 import Feature from './components/Features'
 import Info from './components/Info'
 import Download from './components/Download'
+import Footer from './components/Footer'
 import './App.css'
 import './scss/main.scss'
 
@@ -19,6 +20,7 @@ function App() {
       <Feature/>
       <Info/>
       <Download/>
+      <Footer/>
     </>
   )
 }
