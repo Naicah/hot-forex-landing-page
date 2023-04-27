@@ -24,18 +24,19 @@
     }
 
     &__nav-icon {
-        @media only screen and (min-width: 600px) {
+        @media (min-width: 600px) {
             display: none;
         }
     }
 
     &__nav-container {
-        @media only screen and (max-width: 600px) {
+        @media (max-width: 600px) {
             display: none;
         }
         display: flex;
         justify-content: space-between;
         padding-top: 0.5rem;
+        padding-right: 4rem;
         
         p {
             font-size: 0.6rem;
