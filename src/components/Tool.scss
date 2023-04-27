@@ -1,7 +1,7 @@
 @import '../scss/main.scss';
 .tool {
     background-image: url(../assets/bkg.jpg);
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -13,6 +13,7 @@
         max-width: $content-width;
         display: inline-grid;
 
+        // Desktop layout
         @media (min-width: 600px) {
             grid-template-columns: 40% 60%;
         }
@@ -41,7 +42,7 @@
         }
 
         p {
-            font-size: 0.8rem;
+            font-size: $normal-content;
         }
     }
 

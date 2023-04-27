@@ -4,7 +4,7 @@ import googleplay from '../assets/googleplay.png'
 import appstore from '../assets/appstore.png'
 
 
-const Header = () => {
+const Tool = () => {
     return ( 
     <div className="tool" >
         <div className="tool__container">
@@ -29,4 +29,4 @@ const Header = () => {
     </div>
     );
 };
-export default Header;
+export default Tool;

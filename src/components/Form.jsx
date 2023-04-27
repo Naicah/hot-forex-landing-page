@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Form.scss'
 
-const Header = () => {
+const Form = () => {
     const [email, setEmail] = useState("")
     const [country, setCountry] = useState("")
     const [phonePrefix, setPhonePrefix] = useState("")
@@ -67,4 +67,4 @@ const Header = () => {
     </div>
     );
 };
-export default Header;
+export default Form;

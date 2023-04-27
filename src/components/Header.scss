@@ -24,12 +24,14 @@
     }
 
     &__nav-icon {
+        // Hide on desktop
         @media (min-width: 600px) {
             display: none;
         }
     }
 
     &__nav-container {
+        // Hide on mobile
         @media (max-width: 600px) {
             display: none;
         }
