@@ -1,11 +1,19 @@
 import { useState, useEffect } from 'react'
+import Modal from './Modal';
 import './Form.scss'
 
 const Form = () => {
+    const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
     const [country, setCountry] = useState("")
     const [phonePrefix, setPhonePrefix] = useState("")
-    const [currency, setCurrency] = useState("")
+    const [phone, setPhone] = useState("")
+    const [currency, setCurrency] = useState("USD")
+    const [isOpen, setIsOpen] = useState(false);
+    const handleOpenModal = () => setIsOpen(true);
+    const handleCloseModal = () => setIsOpen(false);
+ 
 
     useEffect(() => {
         if(!country) {
@@ -30,15 +38,15 @@ const Form = () => {
 
     function submit(event) {
         event.preventDefault()
-        console.log(event)
+        handleOpenModal()
     }
 
     return ( 
     <div className="form">
         <form className="form__container" onSubmit={submit}>
             <div className="form__input-container">
-                <input className="form__input" type="text" name="firstName" placeholder="First Name" required/>
-                <input className="form__input" type="text" name="lastName" placeholder="Last Name" required/>
+                <input className="form__input" type="text" name="firstName" placeholder="First Name" required onChange={event => setFirstName(event.currentTarget.value)}/>
+                <input className="form__input" type="text" name="country" placeholder="Last Name" required onChange={event => setLastName(event.currentTarget.value)}/>
                 <input className="form__input" type="email" name="email" placeholder="Email" required onChange={event => setEmail(event.currentTarget.value)}/>
                 <select className="form__input" name="country" defaultValue={'default'} required onChange={event => setCountry(event.currentTarget.value)}>
                     <option value="default" disabled >Country of Residence</option> 
@@ -48,12 +56,12 @@ const Form = () => {
                 </select>
                 <div className="form__phone-container">
                     <p className="form__input form__phone-prefix">{phonePrefix}</p>
-                    <input className="form__input form__phone" type="number" name="phone" placeholder="Phone Number" required/>
+                    <input className="form__input form__phone" type="number" name="phone" placeholder="Phone Number" required onChange={event => setPhone(event.currentTarget.value)}/>
                 </div>
                 <select className="form__input" name="currency" required onChange={event => setCurrency(event.currentTarget.value)}>
-                    <option value="usd">USD</option> 
-                    <option value="eur">EUR</option> 
-                    <option value="gbp">GBP</option> 
+                    <option value="USD">USD</option> 
+                    <option value="EUR">EUR</option> 
+                    <option value="GBP">GBP</option> 
                 </select>
             </div>
             <div className="form__submit-container">
@@ -64,6 +72,21 @@ const Form = () => {
                 <button className="form__submit-button" type="submit" >REGISTER NOW</button>
             </div>
         </form>
+
+        <div>
+        <Modal 
+            isOpen={isOpen} 
+            handleOpenModal={handleOpenModal} 
+            handleCloseModal={handleCloseModal} 
+            firstName={firstName} 
+            lastName={lastName} 
+            email={email} 
+            country={country} 
+            phonePrefix={phonePrefix} 
+            phone={phone} 
+            currency={currency} 
+        />
+    </div>
     </div>
     );
 };
