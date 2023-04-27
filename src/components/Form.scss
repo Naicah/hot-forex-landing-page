@@ -9,6 +9,22 @@
         width: 80%;
         max-width: $content-width;
         display: inline-grid;
+
+        // Desktop layout
+        @media (min-width: 600px) {
+            grid-template-columns: 75% 25%;
+            column-gap: 1rem;
+            row-gap: 1rem;
+        }
+    }
+    
+    .form__input-container {
+        // Desktop layout
+        @media (min-width: 600px) {
+            display: inline-grid;
+            grid-template-columns: auto auto auto;
+            column-gap: 1rem;
+        }
     }
 
     &__input {
@@ -21,10 +37,9 @@
         &::placeholder {
             color:black;
         }
-
     }
-    select {
-        margin: 0;      
+
+    select {    
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -34,7 +49,6 @@
     }
     
     select.form__input {
-        
         background-image:
         linear-gradient(45deg, transparent 50%, rgb(158, 158, 158) 50%),
         linear-gradient(135deg, rgb(158, 158, 158) 50% 50%, transparent 50%);
@@ -57,10 +71,10 @@
     &__phone-prefix {
         width: 20%
     }
+
     &__phone {
         width: 78%
     }
-
 
     &__terms-label {
         display: block;
@@ -73,9 +87,11 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        margin-top:1rem;        
+        margin-top:1rem;   
+        text-align: left;     
     }
     
+    // Hide the browser's default checkbox 
     &__terms {
         position: absolute;
         opacity: 0;
@@ -84,6 +100,7 @@
         width: 0;
     }
 
+    // Create a custom checkbox 
     &__terms-checkmark {
         position: absolute;
         top: 0;
@@ -94,16 +111,19 @@
 
     }
     
+    // Hide the browser's default checkbox
     .form__terms-checkmark:after {
         content: "";
         position: absolute;
         display: none;
       }
     
+    // Show the checkmark when checked
     .form__terms-label input:checked ~ .form__terms-checkmark:after {
         display: block;
     }
 
+    // Style the checkmark/indicator
     .form__terms-label .form__terms-checkmark:after {
         left: 5px;
         width: 5px;
@@ -127,3 +147,4 @@
         margin: 1rem 0
     }
 }
+

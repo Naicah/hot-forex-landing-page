@@ -6,6 +6,7 @@
     background-size: cover;
     display: flex;
     justify-content: space-around;
+    padding-top: 2rem;
     
     &__container {
         width: 80%;
@@ -22,7 +23,6 @@
     &__info {
         color: white;
         text-align: left;
-        max-width: 40%;
 
         h2, h3, p {
             font-weight: normal;
